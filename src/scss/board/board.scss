@@ -1,0 +1,35 @@
+@import '../animations/animations.scss';
+@import '../colors.scss';
+
+.board {
+    width: 95vw;
+    min-height: 100vh;
+    background: $board-bg;
+    padding: 1rem 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    & > h1 {
+        color: $dark-grey;
+        font-size: 2.5em;
+        font-weight: 700;
+        letter-spacing: .5rem;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .loader {
+        width: 100%;
+        font-size: 4.5rem;
+        display: inline-block;
+        text-align: center;
+
+        animation-name: bg-grow;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+}

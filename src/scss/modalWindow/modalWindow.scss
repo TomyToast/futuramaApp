@@ -1,0 +1,79 @@
+@import '../animations/animations.scss';
+@import '../colors.scss';
+
+.modalWindow {
+    font-size: 1rem;
+
+    animation-duration: .5s;
+    animation-name: show;
+
+     .header {
+    width: 100%;
+    border-bottom: 0.2rem solid $header;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: .4rem;}
+
+      .content {
+    width: 100%;
+    max-height: 50vh;
+    padding: .6rem .6rem;
+    overflow-y: scroll;
+    text-decoration: quote($string: "");
+    }
+
+    .actions {
+    width: 100%;
+    padding: .8rem .6rem;
+    margin: auto;
+    text-align: center;
+    }
+
+   .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: .1rem .6rem;
+    line-height: 1.2rem;
+    right: -0.8rem;
+    top: -0.8rem;
+    font-size: 2rem;
+    background: $light;
+    border-radius: 1.1rem;
+    border: 1px solid $close-border;
+    }
+
+    .popupList {
+        list-style-type: none;
+
+        .popupElement {
+            margin: 1rem 0;
+            text-align: center;
+            border-bottom: 1px solid $light-grey;
+            line-height: 1.5;
+        }
+    }
+
+    .button {
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 0.7rem;
+        background: $light;
+        border: .2rem solid $light-grey;
+        border-radius: .5rem;
+        cursor: pointer;
+        margin: .1rem .5rem;
+        text-transform: capitalize;
+        transition: border 0.5s ease;
+
+        &:hover {
+            border: .2rem solid $button_hover-border;
+        }
+
+        &_tip {
+            animation-duration: 1.5s;
+            animation-name: show;
+
+        }
+    }
+  }
