@@ -74,7 +74,7 @@ class App extends Component {
     return (
       <div className="board" >
         {characters.length === 0 ? <h2 className="loader">Loading...</h2> : <>
-          <h1>Futurama characters</h1>
+          <h1>Futurama's characters</h1>
           <Board characters={characters} />
         </>}
       </div>
