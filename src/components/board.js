@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CharCard from './charCard';
+import Card from './card';
 
 class Board extends Component {
 
@@ -40,45 +40,6 @@ class Board extends Component {
                     :
                     Promise.reject('ups... something went wrong')
                 ));
-        // .then(data => {
-        //     let name = data[0].character;
-        //     let obj = {};
-        //     for (let prop in data) {
-        //         obj[data[data.length].character] = data[prop]
-        //     }
-        //     console.log(obj)
-        // })
-        // .then(values => {
-        //     console.log(values)
-        // })
-        //     )
-        // }
-        // console.log(obj)
-        // data.map(elm => {
-        //     console.log(elm.quote)
-
-        // })
-        //             return (
-        //     {
-        //         names: data[0].character,
-        //         imageUrl: data[0].image,
-        //     }
-        // )
-        // data.map(elm => {
-        //     let names = [elm.character]
-        //     console.log(names[0])
-        // console.log(elm)
-        // elm.character
-        // name:
-        // imageUrl: elm.image,
-        // randomQuote: elm.quote,
-        // fiveQuotes: arr.slice(0, 5).map((element) => element.quote)
-
-        // })
-        // .then(values => {
-        //     console.log(values)
-        // })
-        // )
         Promise.all(request)
             .then(cuttedVals => {
 
@@ -112,7 +73,7 @@ class Board extends Component {
                         <>
                             <h1>Futurama's characters</h1>
                             <ul className="board" >
-                                <CharCard
+                                <Card
                                     characters={characters} />
                             </ul>
                         </>

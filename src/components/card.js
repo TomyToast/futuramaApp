@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
 import Popup from "reactjs-popup";
+
 import Modal from './modal';
 
-export default class CharCard extends Component {
+import charCard from '../funcComponents/charCard';
+
+export default class Card extends Component {
 
     render() {
 
@@ -13,17 +17,7 @@ export default class CharCard extends Component {
             return (
                 <li key={ind}>
                     <Popup trigger={
-                        <div className="charCard" >
-                            <h2 className="name">{name}</h2>
-                            <img
-                                src={imageUrl}
-                                className="image"
-                                alt={`this is ${name}`} />
-                            <blockquote
-                                className="randomQuote">
-                                " {randomQuote} "
-                            </blockquote>
-                        </div>
+                        charCard(name, imageUrl, randomQuote)
                     } modal key={ind} >
                         {close => (
                             <Modal close={close} name={name} quotes={fiveQuotes} />
@@ -40,6 +34,6 @@ export default class CharCard extends Component {
         )
     }
 }
-CharCard.propTypes = {
+charCard.propTypes = {
     charakters: PropTypes.array
 }
